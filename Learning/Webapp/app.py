@@ -13,14 +13,16 @@ def index():
 def hello():
     return "Hello I finally understand what is going on here!"
 
+
 @app.get("/home")
 def home_page():
-        return render_template("home.html")    
+    return render_template("home.html", the_title="Welcome!")
 
 
 @app.get("/showform")
 def display_form():
-    return render_template("form.html")
+    return render_template("form.html", the_title="Give us your details!")
+
 
 @app.post("/processform")
 def process_form():
@@ -29,7 +31,7 @@ def process_form():
     with open("suckers.text", "a") as sf:
         print(f"{the_name}, {the_dob}", file=sf)
     return f"Hi there , {the_name} , we know you were born on : {the_dob} ."
-    
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>GIVE ME YOU DETAIL</title>
-    </head>
-    <body>
-        <h2>Give me your detail</h2>
+{% extends "base.html"}
+
+{% block body %}
         <p>
             Congratulations ! you are a winner!
         </p>
@@ -16,5 +12,5 @@
             DOB: <input type="text" name="thedob"><br />
             <input type="submit" value="Do it!">
         </form>
-    </body>
-</html>
+
+{% endblock %}
