@@ -15,16 +15,12 @@ def hello():
 
 @app.get("/home")
 def home_page():
-    with open("home.html") as f:
-        html = f.read()
-    return html
+        return render_template("home.html")    
 
 
 @app.get("/showform")
 def display_form():
-    with open("form.html") as f:
-        html = f.read()
-    return html
+    return render_template("form.html")
 
 @app.post("/processform")
 def process_form():
