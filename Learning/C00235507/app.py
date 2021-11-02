@@ -1,5 +1,4 @@
-from flask import Flask, request, render_template
-import datetime
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -29,6 +28,14 @@ def rdr_page():
 @app.get("/gtainfo")
 def gta_page():
     return render_template("gta.html", the_title="Grand Theft Auto :")
+
+@app.get("/bullyinfo")
+def bully_page():
+    return render_template("bully.html", the_title="Bully Game :")
+
+@app.get("/intrestsinfo")
+def intrest_page():
+    return render_template("intrest.html", the_title="My Intrests :")
 
 if __name__ == "__main__":
     app.run(debug=True)
