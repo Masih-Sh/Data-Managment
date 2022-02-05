@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+        <p>
+            <b>Lets get started !</b><br><br><br><br>
+            <b>Your Time Has Started</b> <br><br><br>
+            
+
+            Your Word is :<b>{{randomWord}}</b>
+        </p>
+        <p>
+            <form action="/result" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            Enter your seven words in this box, separating each word by a space:
+                        </td>
+                        <td>
+                            <input type="text" name="user_input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            <input type="submit" value ="DONE!">
+                        </td>
+                    </tr>
+                </table>                
+              </form> 
+        </p>       
+{% endblock %}
+           

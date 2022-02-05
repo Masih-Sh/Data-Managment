@@ -1,0 +1,72 @@
+for our database we are using MariaDB
+
+we open MySQL and enter the password of the already built database we have over there 
+password:itcarlow(all lower case)
+
+in order to see the avaiable data base we use 
+
+show databases;
+
+now that we see the list of the avaiable databases , we are going to create a new one for our game.
+we are going to call it project2_db
+
+create database project2_db;
+
+use show database to make sure our database is created.
+
+now we have 6 rows.
+
+in order to delete our database (if its needed) we are going to use :
+
+drop database game4leaderboard_db;
+
+now we create a user name and a password for our database by typing
+
+grant all on project2_db.* to 'project2' identified by 'project2password'
+
+give it a username and password.
+
+##########################################
+username: project2
+password: project2password
+############################################
+out data base is created and our work on creating it is finished
+
+============================================================================================
+
+we leave by typing quit
+
+then we type mysql -u project2 -p project2_db
+
+then it will ask for the password and we enter the password
+
+now we create the actual table for players
+
+create table players (
+->time float,
+->name varchar(64) not null,
+->sourceword varchar(64),
+->userinput varchar(150));
+
+now we check the table
+
+describe players;
+
+==============================================================================================
+
+we need to make a new table for our logs as well
+
+create table logs (
+->result varchar(300),
+->sourceword varchar(300),
+->userinput varchar(300),
+->time timestamp,
+->ip varchar(300),
+->explorer varchar(300));
+
+now we chack the table 
+
+describe logs
+
+
+

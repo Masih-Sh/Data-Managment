@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h2>Your word was : <b>{{randomWord}}</b><br></h2>
+
+
+<div class="myDiv1" style=display:{{buttonState[0]}};>
+    <h3>You misspelt these words : <b>{{result1}}</b><br></h3>    
+    <h3>you used these invalid letters : <b>{{invalidLetters}}<b><br></h3>        
+    <h2><b>{{resultString}}</b></h2>
+    <p>
+        <form action="/home" method="get">
+            <table>               
+                <td>
+                    <input type="submit" value ="Try Again !">
+                </td>                 
+            </table>                
+          </form> 
+    </p>       
+  </div><br>
+
+<div class="myDiv2" style=display:{{buttonState[1]}};>
+    <h2><b>{{resultString}}</b></h2>
+    <h2><b>Your Time : {{currentTime}}</b></h2>
+  
+<p>    
+    <p>
+        <form action="/final" method="post">
+            <table>
+                <tr>
+                    <td>
+                        Enter your Name Here :<input type="text" name="user_name">
+                        <input type="submit" value ="DONE!">
+                    </td>                              
+                </tr>
+            </table>                
+          </form> 
+    </p>       
+</p> 
+</div>
+{% endblock %}
+           
